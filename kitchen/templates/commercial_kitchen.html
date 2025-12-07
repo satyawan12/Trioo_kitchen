@@ -1,0 +1,251 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Commercial Kitchen
+- Trioo{% endblock %} {% block content %}
+
+<!-- Hero Section -->
+<section
+  class="text-white text-center d-flex align-items-center justify-content-center"
+  style="
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('{% static 'images/comm1.jpeg' %}') center/cover no-repeat;
+    height: 70vh;
+  "
+>
+  <div>
+    <h1 class="display-3 fw-bold">Commercial Kitchen Solutions</h1>
+    <p class="lead">
+      Engineered for performance, designed for hygiene & built to last.
+    </p>
+    <a href="#contact" class="btn btn-light mt-3 px-4 py-2">Get a Quote</a>
+  </div>
+</section>
+
+<!-- Features Section -->
+<!-- Our Success Journey -->
+<section class="container my-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Our Journey in Commercial Kitchen Excellence</h2>
+    <p class="text-muted">A story of passion, innovation, and impact.</p>
+  </div>
+
+  <div class="bg-light p-4 rounded shadow-sm">
+    <div
+      class="d-flex flex-column flex-md-row justify-content-between text-center text-md-start"
+    >
+      <div class="mb-4 mb-md-0">
+        <h1 class="fw-bold display-5 text-primary">500+</h1>
+        <p class="mb-0">Projects Delivered</p>
+      </div>
+      <div class="mb-4 mb-md-0">
+        <h1 class="fw-bold display-5 text-success">150+</h1>
+        <p class="mb-0">Happy Hospitality Brands</p>
+      </div>
+      <div class="mb-4 mb-md-0">
+        <h1 class="fw-bold display-5 text-danger">10+ Years</h1>
+        <p class="mb-0">Experience in Kitchen Design</p>
+      </div>
+      <div>
+        <h1 class="fw-bold display-5 text-warning">100%</h1>
+        <p class="mb-0">Client Satisfaction</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Our Recent Installations</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="ratio ratio-4x3">
+          <img
+            src="{% static 'images/comm1.jpeg' %}"
+            class="img-fluid rounded shadow object-fit-cover"
+            alt="Commercial Kitchen 1"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ratio ratio-4x3">
+          <img
+            src="{% static 'images/comm2.jpeg' %}"
+            class="img-fluid rounded shadow object-fit-cover"
+            alt="Commercial Kitchen 2"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="ratio ratio-4x3">
+          <img
+            src="{% static 'images/comm3.jpeg' %}"
+            class="img-fluid rounded shadow object-fit-cover"
+            alt="Commercial Kitchen 3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Equipment Categories Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Explore Our Equipment Range</h2>
+    <div class="row g-4 text-center">
+      <!-- Existing 6 Categories -->
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Commercial-Cooking-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Cooking Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Commercial Cooking Equipment</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Commercial-Display-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Display Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Commercial Display Equipment</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Commercial-Refrigeration-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Refrigeration Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">
+            Commercial Refrigeration Equipment
+          </h5>
+        </div>
+      </div>
+
+      <!-- New 6 Categories (from screenshot) -->
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Dish-Washing-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Dish Washing Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Dish Washing Equipment</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Service-Section.webp' %}"
+            class="img-fluid mb-3"
+            alt="Service Section"
+          />
+          <h5 class="fw-bold text-uppercase">Service Section</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Pantry-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Pantry Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Pantry Equipment</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Bar-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Bar Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Bar Equipment</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Preparation-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Preparation Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Preparation Equipment</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 border rounded">
+          <img
+            src="{% static 'images/Imported-Equipment.webp' %}"
+            class="img-fluid mb-3"
+            alt="Imported Equipment"
+          />
+          <h5 class="fw-bold text-uppercase">Imported Equipment</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">What Our Clients Say</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <p class="fst-italic">
+            “Trioo transformed our hotel kitchen into a world-class workspace.
+            Highly recommended!”
+          </p>
+          <h6 class="mt-3 mb-0 fw-semibold">Rajesh Khanna</h6>
+          <small class="text-muted">Hotel Silver Star, Delhi</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <p class="fst-italic">
+            “From layout to finish, everything was smooth and professional.”
+          </p>
+          <h6 class="mt-3 mb-0 fw-semibold">Meena Arora</h6>
+          <small class="text-muted">The Urban Tandoor, Mumbai</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 shadow rounded bg-white h-100">
+          <p class="fst-italic">
+            “Their stainless steel setup meets all hygiene standards and looks
+            sleek!”
+          </p>
+          <h6 class="mt-3 mb-0 fw-semibold">Vikas Sharma</h6>
+          <small class="text-muted">CloudChef Kitchens, Bengaluru</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section id="contact" class="py-5 text-center bg-dark text-white">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Ready to Design Your Commercial Kitchen?</h2>
+    <p class="mb-4">
+      Let us know your requirements. We'll provide a custom layout & quotation.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-outline-light px-4 py-2">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+{% endblock %}

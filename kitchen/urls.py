@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home_page, gallery_page,german_kitchen,italian_kitchen, island_kitchen,get_categories,Parallel_kitchen, get_projects, submit_inquiry,contact_view,about_page,kitchen_page,product_page,walkin_wardrobe,hinged_wardrobe,sliding_wardrobe,kitchen_U_page,g_shaped,inline_kitchen
+from .views import home_page, gallery_page,german_kitchen,italian_kitchen,commercial_kitchen, island_kitchen,get_categories,Parallel_kitchen, get_projects, submit_inquiry,contact_view,about_page,kitchen_page,product_page,walkin_wardrobe,hinged_wardrobe,sliding_wardrobe,kitchen_U_page,g_shaped,inline_kitchen
 
 urlpatterns = [
     path('', home_page, name='home'),  # Home page
@@ -21,6 +21,7 @@ urlpatterns = [
     path('italian_kitchen/', italian_kitchen, name='italian_kitchen'),
     path('german_kitchen/', german_kitchen, name='german_kitchen'),
     path('Parallel_kitchen/', Parallel_kitchen, name='Parallel_kitchen'),
+    path('commercial-kitchen/', commercial_kitchen, name='commercial_kitchen'),
     
    
     # API: Post Inquiry

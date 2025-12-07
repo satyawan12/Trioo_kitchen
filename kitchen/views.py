@@ -53,6 +53,8 @@ def contact_view(request):
 
     return render(request, "contact.html")
 
+
+
 def about_page(request):
     return render(request, "about.html")
 def kitchen_page(request):
@@ -60,7 +62,24 @@ def kitchen_page(request):
 def kitchen_U_page(request):
     return render(request, "u_shaped.html")
 def product_page(request):
-    return render(request, "product.html")
+    products = [
+    {"title": "Preparation Equipments", "image": "images/cooking_equiments.jpeg", "description": "Essential tools to streamline kitchen prep tasks."},
+    {"title": "Cooking Equipments", "image": "images/cooking_equipment.jpg", "description": "Reliable and energy-efficient cooking systems."},
+    {"title": "Chapati Equipments", "image": "images/automatic-chapati-making-machine.jpg", "description": "Automated machines for effortless chapati making."},
+    {"title": "Refrigeration", "image": "images/refrigeration.jpg", "description": "Keep ingredients fresh with premium refrigeration."},
+    {"title": "Water Cooler & Dispensers", "image": "images/water_cooler.jpg", "description": "Smart hydration solutions for every kitchen."},
+    {"title": "Bar Equipments", "image": "images/bar_equipment.jpg", "description": "Stylish and durable equipment for your bar needs."},
+    {"title": "Display Counters", "image": "images/display_counter.jpg", "description": "Elegant counters to present your delicacies."},
+    {"title": "Stainless Steel Table", "image": "images/stainless_steel_table.jpg", "description": "Durable and hygienic work surfaces."},
+    {"title": "Storage Equipments", "image": "images/storage_equipment.jpg", "description": "Optimized storage for efficiency and space saving."},
+    {"title": "Trolley Equipments", "image": "images/trolley_equipment.jpg", "description": "Smooth mobility and transport of goods."},
+    {"title": "Service Equipments", "image": "images/service_equipment.jpg", "description": "Tools that enhance kitchen service delivery."},
+    {"title": "Bakery Equipments", "image": "images/bakery_equipment.jpg", "description": "Precision tools for perfect bakery results."},
+    {"title": "Imported Equipments", "image": "images/imported_equipment.jpg", "description": "Top-notch imported appliances."},
+    {"title": "Exhaust & Ducting Systems", "image": "images/Exhaust-Hood-Island-Type-1.jpg", "description": "Clean air systems for modern kitchens."},
+    {"title": "Washing Equipments", "image": "images/washing_equipment.jpg", "description": "Efficient dish and utensil cleaning systems."},
+]
+    return render(request, "product.html",{"products": products})
 def gallery_page(request):
     return render(request, "gallery.html")
 def walkin_wardrobe(request):
@@ -79,6 +98,9 @@ def italian_kitchen(request):
     return render(request, 'italian_kitchen.html')
 def german_kitchen(request):
     return render(request, 'german_kitchen.html')
+def commercial_kitchen(request):
+    return render(request, 'commercial_kitchen.html')
+
 
 def Parallel_kitchen(request):
     return render(request, 'Parallel_kitchen.html')

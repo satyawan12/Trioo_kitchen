@@ -85,7 +85,10 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand bg-white p-1 rounded" href="{% url 'home' %}">
+          <a
+            class="navbar-brand bg-white p-1 rounded"
+            href="{% url 'commercial_kitchen' %}"
+          >
             <img src="{% static 'images/logo.svg' %}" alt="Logo" height="40" />
           </a>
           <button
@@ -103,8 +106,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link text-white" href="{% url 'home' %}"
-                  >MODULAR KITCHEN</a
+                <a
+                  class="nav-link text-white"
+                  href="{% url 'commercial_kitchen' %}"
+                  >COMMERCIAL KITCHEN</a
                 >
               </li>
               <li class="nav-item">
