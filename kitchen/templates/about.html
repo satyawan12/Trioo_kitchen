@@ -1,90 +1,300 @@
-{% extends 'base.html' %} {% load static %} {% block title %}About Trioo Modular
-Kitchens | Premium Stainless Steel Kitchens{% endblock %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %} About Triooo
+Modular Kitchens | Premium Stainless Steel Kitchens {% endblock %} {% block
+content %} {% block content %}
+<style>
+  /* ================= GLOBAL ================= */
 
-<!-- Hero Banner -->
+  .section-spacing {
+    padding: 100px 0 32px 0;
+  }
+
+  .section-title {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 50px;
+  }
+
+  .text-muted-custom {
+    color: #6c757d;
+  }
+
+  /* ================= HERO ================= */
+
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  /* ================= WHAT WE STAND FOR - FLOW BLOCK ================= */
+
+  .stand-wrapper {
+    background: #111;
+    color: #fff;
+  }
+
+  .stand-item {
+    padding: 70px 50px;
+    text-align: center;
+    transition: 0.4s ease;
+  }
+
+  .stand-item h4 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .stand-item p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .stand-item:hover {
+    background: #000;
+  }
+
+  /* ================= MISSION / VISION ================= */
+
+  .mv-section {
+    background: #f8f9fa;
+  }
+
+  .mv-box {
+    padding: 70px 60px;
+    text-align: center;
+  }
+
+  .mv-box h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .mv-divider {
+    width: 60px;
+    height: 3px;
+    background: #111;
+    margin: 20px auto 30px;
+  }
+
+  .mv-box p {
+    color: #6c757d;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* Responsive */
+
+  @media (max-width: 768px) {
+    .section-spacing {
+      padding: 70px 0;
+    }
+    .stand-item,
+    .mv-box {
+      padding: 50px 30px;
+    }
+  }
+</style>
+
+<!-- ================= HERO SECTION ================= -->
 <section
   class="text-white text-center d-flex align-items-center justify-content-center position-relative"
   style="
-    background: linear-gradient(to right, #2ec4b6, #f4b400),
-      url('{% static 'images/contact-banner.jpg' %}') center/cover no-repeat;
-    min-height: 45vh;
+    background: url('{% static 'images/contact-banner.jpg' %}') center/cover
+      no-repeat;
+    min-height: 50vh;
   "
 >
-  <div class="container">
-    <h1 class="display-3 fw-bold">About Trioo</h1>
-    <p class="lead">Premium Stainless Steel Kitchens, Designed for Life</p>
+  <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div>
+
+  <div class="container position-relative">
+    <h1 class="display-3 fw-bold">About Triooo</h1>
+    <p class="lead text-light">
+      Premium Stainless Steel Kitchens, Designed for Life
+    </p>
   </div>
 </section>
 
-<!-- Who We Are -->
-<section class="py-5 bg-white">
+<!-- ================= WHO WE ARE ================= -->
+<section class="section-spacing bg-white">
   <div class="container">
-    <div class="mx-auto text-center" style="max-width: 900px">
-      <h2 class="fw-bold mb-4" style="color: #2ec4b6">Who We Are</h2>
-      <p class="lead text-muted">
-        At <strong>Trioo Modular Kitchens</strong>, we craft stainless steel
-        kitchens that blend durability, hygiene, and style. Our designs reflect
-        modern tastes while staying rooted in utility — making us a trusted name
-        in premium kitchen manufacturing.
-      </p>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+        <h2 class="fw-bold mb-4">Who We Are</h2>
+
+        <p class="text-muted-custom">
+          At <strong class="text-dark">TRIOOO Group</strong>, we engineer
+          high-performance stainless steel kitchen environments designed for
+          durability, hygiene, and modern efficiency.
+        </p>
+
+        <p class="text-muted-custom">
+          From concept planning to installation, we deliver complete end-to-end
+          commercial and modular kitchen solutions tailored for restaurants,
+          hotels, cafés, and cloud kitchens.
+        </p>
+
+        <div class="mt-4">
+          <p class="mb-2 text-muted-custom">— Smart Space Optimization</p>
+          <p class="mb-2 text-muted-custom">
+            — Premium Stainless Steel Craftsmanship
+          </p>
+          <p class="mb-2 text-muted-custom">— Hygienic & Durable Designs</p>
+          <p class="text-muted-custom">— Reliable Project Delivery</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <img
+          src="{% static 'images/about-kitchen.jpg' %}"
+          class="img-fluid rounded-4 shadow"
+          alt="Stainless Steel Kitchen"
+        />
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Our Journey -->
-<section
-  class="py-5"
-  style="background: linear-gradient(to right, #f4b400, #2ec4b6)"
->
-  <div class="container text-white">
-    <div class="mx-auto text-center" style="max-width: 900px">
-      <h2 class="fw-bold mb-4">Our Journey</h2>
-      <p class="lead">
-        Founded in 2015, Trioo set out to revolutionize kitchen design with
-        stainless steel. We opened our first showroom in 2017, grew to 10+
-        cities by 2020, and expanded globally by 2023. Today, our legacy
-        continues — driven by design, quality, and innovation.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- What We Stand For -->
-<section class="py-5 bg-light">
+<!-- ================= OUR JOURNEY ================= -->
+<!-- ================= OUR JOURNEY (TIMELINE STYLE) ================= -->
+<section class="journey-section">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-bold" style="color: #2ec4b6">What We Stand For</h2>
+      <h2 class="journey-title">Our Journey</h2>
+      <div class="title-line"></div>
     </div>
-    <div class="row text-center justify-content-center">
-      <div class="col-md-4 mb-4">
-        <div
-          class="p-4 rounded shadow bg-white h-100 border-top border-4 border-warning"
-        >
-          <h5 class="fw-bold">Excellence</h5>
-          <p class="text-muted small">
-            Every kitchen is a reflection of craftsmanship, precision, and
-            premium materials.
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="year">2015</div>
+        <p>
+          Founded with a vision to redefine stainless steel kitchen solutions.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2017</div>
+        <p>Opened our first showroom, expanding customer reach.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2020</div>
+        <p>Expanded across 10+ cities with growing commercial projects.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2025</div>
+        <p>
+          Global expansion delivering premium stainless steel kitchens
+          worldwide.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CSS FOR THIS SECTION ===== -->
+  <style>
+    .journey-section {
+      padding: 50px 0;
+      background: #f8f9fa;
+    }
+
+    .journey-title {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .title-line {
+      width: 60px;
+      height: 3px;
+      background: #111;
+      margin: 15px auto 0;
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ddd;
+    }
+
+    .timeline-item {
+      text-align: center;
+      width: 23%;
+      position: relative;
+    }
+
+    .timeline-item .year {
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 768px) {
+      .timeline {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline::before {
+        display: none;
+      }
+
+      .timeline-item {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</section>
+
+<!-- ================= WHAT WE STAND FOR ================= -->
+<section class="stand-wrapper">
+  <div class="container-fluid">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <div class="stand-item">
+          <h4>Excellence</h4>
+          <p>
+            Every kitchen reflects craftsmanship, precision, and premium-grade
+            materials engineered for durability.
           </p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div
-          class="p-4 rounded shadow bg-white h-100 border-top border-4 border-info"
-        >
-          <h5 class="fw-bold">Innovation</h5>
-          <p class="text-muted small">
-            We bring fresh thinking to layouts, fittings, and space
-            optimization.
+
+      <div class="col-md-4 border-start border-end border-secondary">
+        <div class="stand-item">
+          <h4>Innovation</h4>
+          <p>
+            Forward-thinking layouts, intelligent fittings, and space
+            optimization tailored for modern lifestyles.
           </p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div
-          class="p-4 rounded shadow bg-white h-100 border-top border-4 border-warning"
-        >
-          <h5 class="fw-bold">Integrity</h5>
-          <p class="text-muted small">
-            Clear communication, honest processes, and lasting relationships.
+
+      <div class="col-md-4">
+        <div class="stand-item">
+          <h4>Integrity</h4>
+          <p>
+            Transparent processes, honest communication, and long-term
+            relationships built on trust.
           </p>
         </div>
       </div>
@@ -92,29 +302,28 @@ Kitchens | Premium Stainless Steel Kitchens{% endblock %} {% block content %}
   </div>
 </section>
 
-<!-- Mission & Vision -->
-<section class="py-5 bg-white">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-6 mb-4">
-        <div
-          class="p-4 rounded bg-light shadow border-start border-4 border-info h-100"
-        >
-          <h4 class="fw-bold text-dark">Our Mission</h4>
-          <p class="text-muted small">
-            To design modular kitchens that enhance everyday life — functionally
-            and beautifully.
+<!-- ================= MISSION & VISION ================= -->
+<section class="mv-section">
+  <div class="container-fluid">
+    <div class="row g-0">
+      <div class="col-md-6 bg-white">
+        <div class="mv-box">
+          <h3>Our Mission</h3>
+          <div class="mv-divider"></div>
+          <p>
+            To design modular kitchens that enhance everyday life —
+            functionally, hygienically, and beautifully.
           </p>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div
-          class="p-4 rounded bg-light shadow border-start border-4 border-warning h-100"
-        >
-          <h4 class="fw-bold text-dark">Our Vision</h4>
-          <p class="text-muted small">
-            To be India’s most admired stainless steel kitchen brand, known for
-            innovation and trust.
+
+      <div class="col-md-6 bg-light">
+        <div class="mv-box">
+          <h3>Our Vision</h3>
+          <div class="mv-divider"></div>
+          <p>
+            To become India’s most trusted stainless steel kitchen brand, known
+            for quality, innovation, and reliability.
           </p>
         </div>
       </div>
@@ -122,24 +331,20 @@ Kitchens | Premium Stainless Steel Kitchens{% endblock %} {% block content %}
   </div>
 </section>
 
-<!-- CTA -->
-<section
-  class="py-5 text-center"
-  style="background: linear-gradient(to right, #2ec4b6, #f4b400); color: white"
->
-  <div class="container">
-    <div class="mx-auto" style="max-width: 700px">
-      <h2 class="fw-bold mb-3">Let’s Build Your Dream Kitchen</h2>
-      <p class="mb-4">
-        Get in touch for a free design consultation and explore custom modular
-        kitchen solutions crafted by Trioo.
-      </p>
-      <a
-        href="{% url 'contact' %}"
-        class="btn btn-light btn-lg px-5 rounded-pill shadow"
-        >Contact Us</a
-      >
-    </div>
+<!-- ================= CTA ================= -->
+<section class="section-spacing text-center bg-dark text-white">
+  <div class="container" style="max-width: 700px">
+    <h2 class="fw-bold mb-3">Let’s Build Your Dream Kitchen</h2>
+    <p class="text-light mb-4">
+      Connect with our experts for a personalized design consultation and
+      explore modular kitchen solutions crafted by Trioo.
+    </p>
+    <a
+      href="{% url 'contact' %}"
+      class="btn btn-outline-light btn-lg px-5 rounded-pill"
+    >
+      Contact Us
+    </a>
   </div>
 </section>
 

@@ -1,21 +1,171 @@
 {% extends 'base.html' %} {% load static %} {% block title %}Commercial Kitchen
 - Trioo{% endblock %} {% block content %}
 
+<style>
+  /* ================= HERO SECTION ================= */
+
+  .hero-section {
+    position: relative;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0f0f0f;
+  }
+
+  /* Animated Gradient Mesh Layer */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 300%;
+    background: radial-gradient(
+        circle at 20% 30%,
+        rgba(200, 164, 93, 0.25),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 70%,
+        rgba(255, 255, 255, 0.08),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(44, 83, 100, 0.3),
+        transparent 50%
+      );
+    animation: meshMove 12s ease-in-out infinite alternate;
+    z-index: 1;
+  }
+
+  /* Subtle Noise Texture Effect */
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 2;
+  }
+
+  @keyframes meshMove {
+    0% {
+      transform: translate(-5%, -5%) rotate(0deg);
+    }
+    100% {
+      transform: translate(5%, 5%) rotate(3deg);
+    }
+  }
+
+  /* ================= HERO CONTENT ================= */
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    animation: fadeUp 1.5s ease forwards;
+  }
+
+  /* Text Animation */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    color: #ddd;
+  }
+
+  /* ================= GOLD BUTTON ================= */
+
+  .btn-gold {
+    background: linear-gradient(45deg, #c8a45d, #e6c17a);
+    border: none;
+    color: #000;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border-radius: 50px;
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(200, 164, 93, 0.4);
+  }
+
+  /* ================= REST SECTIONS ================= */
+
+  .stats-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .equipment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, #111, #222);
+  }
+</style>
+
 <!-- Hero Section -->
-<section
-  class="text-white text-center d-flex align-items-center justify-content-center"
-  style="
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('{% static 'images/comm1.jpeg' %}') center/cover no-repeat;
-    height: 70vh;
-  "
->
-  <div>
-    <h1 class="display-3 fw-bold">Commercial Kitchen Solutions</h1>
-    <p class="lead">
+<section class="hero-section text-white text-center">
+  <div id="particles-js"></div>
+
+  <div class="hero-content container">
+    <h1 class="fw-bold mb-3">Commercial Kitchen Solutions</h1>
+    <p class="lead mb-4">
       Engineered for performance, designed for hygiene & built to last.
     </p>
-    <a href="#contact" class="btn btn-light mt-3 px-4 py-2">Get a Quote</a>
+    <a
+      href="javascript:void(0)"
+      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});"
+      class="btn btn-gold px-4 py-3"
+    >
+      Get a Quote
+    </a>
   </div>
 </section>
 
@@ -99,7 +249,7 @@
             class="img-fluid mb-3"
             alt="Cooking Equipment"
           />
-          <h5 class="fw-bold text-uppercase">Commercial Cooking Equipment</h5>
+          <h5 class="fw-bold text-uppercase">Cooking Equipment</h5>
         </div>
       </div>
 
@@ -110,7 +260,7 @@
             class="img-fluid mb-3"
             alt="Display Equipment"
           />
-          <h5 class="fw-bold text-uppercase">Commercial Display Equipment</h5>
+          <h5 class="fw-bold text-uppercase">Display Equipment</h5>
         </div>
       </div>
 
@@ -121,9 +271,7 @@
             class="img-fluid mb-3"
             alt="Refrigeration Equipment"
           />
-          <h5 class="fw-bold text-uppercase">
-            Commercial Refrigeration Equipment
-          </h5>
+          <h5 class="fw-bold text-uppercase">Refrigeration Equipment</h5>
         </div>
       </div>
 
@@ -198,52 +346,52 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center fw-bold mb-4">What Our Clients Say</h2>
-    <div class="row text-center">
+    <h2 class="text-center fw-bold mb-5">What Our Clients Say</h2>
+    <div class="row g-4 text-center">
       <div class="col-md-4">
-        <div class="p-4 shadow rounded bg-white h-100">
+        <div class="testimonial-card p-4 h-100">
           <p class="fst-italic">
-            “Trioo transformed our hotel kitchen into a world-class workspace.
-            Highly recommended!”
+            “Trioo transformed our hotel kitchen into a world-class workspace.”
           </p>
-          <h6 class="mt-3 mb-0 fw-semibold">Rajesh Khanna</h6>
-          <small class="text-muted">Hotel Silver Star, Delhi</small>
+          <h6 class="mt-3 fw-semibold">Rajesh Khanna</h6>
+          <small class="text-muted">Hotel Silver Star</small>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="p-4 shadow rounded bg-white h-100">
+        <div class="testimonial-card p-4 h-100">
           <p class="fst-italic">
-            “From layout to finish, everything was smooth and professional.”
+            “Smooth layout planning and flawless stainless finishing.”
           </p>
-          <h6 class="mt-3 mb-0 fw-semibold">Meena Arora</h6>
-          <small class="text-muted">The Urban Tandoor, Mumbai</small>
+          <h6 class="mt-3 fw-semibold">Meena Arora</h6>
+          <small class="text-muted">Urban Tandoor</small>
         </div>
       </div>
+
       <div class="col-md-4">
-        <div class="p-4 shadow rounded bg-white h-100">
+        <div class="testimonial-card p-4 h-100">
           <p class="fst-italic">
-            “Their stainless steel setup meets all hygiene standards and looks
-            sleek!”
+            “Premium commercial setup that meets all hygiene standards.”
           </p>
-          <h6 class="mt-3 mb-0 fw-semibold">Vikas Sharma</h6>
-          <small class="text-muted">CloudChef Kitchens, Bengaluru</small>
+          <h6 class="mt-3 fw-semibold">Vikas Sharma</h6>
+          <small class="text-muted">CloudChef Kitchens</small>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Call to Action -->
-<section id="contact" class="py-5 text-center bg-dark text-white">
+<!-- CTA -->
+<section id="contact" class="cta-section py-5 text-center text-white">
   <div class="container">
     <h2 class="fw-bold mb-3">Ready to Design Your Commercial Kitchen?</h2>
     <p class="mb-4">
-      Let us know your requirements. We'll provide a custom layout & quotation.
+      We create efficient layouts with world-class stainless finish.
     </p>
-    <a href="{% url 'contact' %}" class="btn btn-outline-light px-4 py-2">
-      Contact Us
+    <a href="{% url 'contact' %}" class="btn btn-gold px-4 py-3">
+      Request Consultation
     </a>
   </div>
 </section>
