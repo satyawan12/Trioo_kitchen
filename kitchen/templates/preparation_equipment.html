@@ -1,0 +1,210 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Preparation
+Equipment - Trioo{% endblock %} {% block content %}
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #111, #222);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .equipment-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%; /* Equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .equipment-box img {
+    height: 220px; /* Fixed image height */
+    width: 100%;
+    object-fit: contain; /* Keeps image proper */
+    margin-bottom: 15px;
+  }
+
+  .equipment-box h5 {
+    min-height: 50px; /* Equal text area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fw-bold">Preparation Equipment</h1>
+    <p class="mt-3">High performance & durable preparation solutions</p>
+  </div>
+</section>
+
+<!-- Equipment Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Shawarma Machine (Gas).webp' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Shawarma Machine (Gas)</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Shawarma Machine (Electric).webp' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Shawarma Machine (Electric)</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Griddle Plate (Gas).webp' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Griddle Plate (Gas)</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Griddle Plate (Electric).webp' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Griddle Plate (Electric)</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Vegetable Cutter Machine.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Vegetable Cutter Machine</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Plate Warmer.webp' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Plate Warmer</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Soiled Plate Collection Trolley.jfif' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Soiled Plate Collection Trolley</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Pulverizer.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Pulverizer</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Potato Peeler.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Potato Peeler</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Wet Grinder.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Wet Grinder</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Dough Kneader.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Dough Kneader</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Bone Saw.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Bone Saw</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Meat Slicer.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Meat Slicer</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Meat Mincer.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Meat Mincer</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Popcorn Machine.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Popcorn Machine</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Chopping Board.jpeg' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Chopping Board Table</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

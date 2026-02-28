@@ -1,0 +1,79 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Imported Equipment
+- Trioo {% endblock %} {% block content %}
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #000428, #004e92);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .equipment-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .equipment-box img {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .equipment-box h5 {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fw-bold">Imported Equipment</h1>
+    <p class="mt-3">International quality commercial kitchen solutions</p>
+  </div>
+</section>
+
+<!-- Equipment Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Rational iCombi Pro Oven.png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Rational iCombi Pro Oven</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Hoshizaki 3 Door Undercounter Freezer .png' %}"
+            class="img-fluid mb-3"
+          />
+          <h5 class="fw-bold">Hoshizaki 3 Door Undercounter Freezer</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

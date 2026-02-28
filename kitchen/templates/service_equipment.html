@@ -1,0 +1,200 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Service Equipment
+- Trioo {% endblock %} {% block content %}
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .equipment-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .equipment-box img {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .equipment-box h5 {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fw-bold">Service Equipment</h1>
+    <p class="mt-3">
+      Premium stainless steel service solutions for commercial kitchens
+    </p>
+  </div>
+</section>
+
+<!-- Equipment Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <!-- Sink Units -->
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <h5 class="fw-bold"></h5>
+          <img src="{% static 'images/Work Table with Sink Unit.png' %}" />
+          <h5 class="fw-bold">Work Table with Sink Unit</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Dirty Dish Landing Table With Garbage Chute.png' %}"
+          />
+          <h5 class="fw-bold">Dirty Dish Landing Table With Garbage Chutek</h5>
+        </div>
+      </div>
+
+      <!-- Work Tables -->
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Single Sink Unit.png' %}" />
+          <h5 class="fw-bold">Single Sink Unit</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Two Sink Unit.png' %}" />
+          <h5 class="fw-bold">Two Sink Unit</h5>
+        </div>
+      </div>
+
+      <!-- Storage -->
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Three Sink Unit.png' %}" />
+          <h5 class="fw-bold">Three Sink Unit</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Clean Dish Landing Table.png' %}" />
+          <h5 class="fw-bold">Clean Dish Landing Table</h5>
+        </div>
+      </div>
+
+      <!-- Small Equipment -->
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Hand Wash Knee Operated.png' %}" />
+          <h5 class="fw-bold">Hand Wash Knee Operated</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/SS Covered Counter.png' %}" />
+          <h5 class="fw-bold">SS Covered Counter</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Pot Wash Sink Unit.png' %}" />
+          <h5 class="fw-bold">Pot Wash Sink Unit</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/SS Onion &Potato Bins.png' %}" />
+          <h5 class="fw-bold">SS Onion /Potato Bins</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Platform Trolley.png' %}" />
+          <h5 class="fw-bold">Platform Trolley</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Work Table with 2 Under Shelf.png' %}" />
+          <h5 class="fw-bold">Work Table with 2 Under Shelf</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Work Table with 2 Under Shelf & 2 OHS.png' %}"
+          />
+          <h5 class="fw-bold">Work Table with 2 Under Shelf & 2 OHS</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Work Counter with 2 Under Shelf.png' %}"
+          />
+          <h5 class="fw-bold">Work Counter with 2 Under Shelf</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Dining Table with Seater.png' %}" />
+          <h5 class="fw-bold">Dining Table with Seater</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Work Counter with Cross Bracing .png' %}"
+          />
+          <h5 class="fw-bold">Work Counter with Cross Bracing</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Pot Rack.png' %}" />
+          <h5 class="fw-bold">Pot Rack</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Utility Trolley.png' %}" />
+          <h5 class="fw-bold">Utility Trolley</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

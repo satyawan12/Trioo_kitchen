@@ -18,6 +18,12 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.contrib import messages
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.conf import settings
+from django.core.mail import send_mail
+
+
 def contact_view(request):
     if request.method == "POST":
         name = request.POST.get("name")
@@ -26,35 +32,72 @@ def contact_view(request):
         subject = request.POST.get("subject")
         message = request.POST.get("message")
 
-        # Compose email content
         full_message = f"""
-        Name: {name}
-        Email: {email}
-        Phone: {phone}
-        Subject: {subject}
-        
-        Message:
-        {message}
-        """
+New Contact Form Submission
+
+Name: {name}
+Email: {email}
+Phone: {phone}
+Subject: {subject}
+
+Message:
+{message}
+"""
 
         try:
+            # 📧 Admin ko email
             send_mail(
-                subject=f"New Contact Form Submission: {subject}",
+                subject=f"Trioo Website Contact: {subject}",
                 message=full_message,
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=["sattukhatkar@gmail.com"],
                 fail_silently=False,
             )
+
+            # 📩 User ko confirmation email
+            send_mail(
+                subject="Thank You for Contacting Trioo Group",
+                message=f"""
+Hi {name},
+
+Thank you for contacting Trioo Group.
+Our team will get back to you shortly.
+
+Regards,
+Trioo Group Team
+                """,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[email],
+                fail_silently=False,
+            )
+
             messages.success(request, "Your message has been sent successfully!")
+
         except Exception as e:
             messages.error(request, f"Error sending message: {e}")
 
         return redirect("contact")
 
     return render(request, "contact.html")
+def cooking(request):
+    return render(request, 'cooking.html')
+def preparation_equipment(request):
+    return render(request, "preparation_equipment.html")
+def refrigeration_equipment(request):
+    return render(request, "refrigeration_equipment.html")
+def display_counters(request):
+    return render(request, 'display_counters.html')
+
+def pantry(request):
+    return render(request, 'plantry.html')
+def imported(request):
+    return render(request, 'imported.html')
 
 
-
+def bar_equipment(request):
+    return render(request, "bar_equipment.html")
+def service_equipment(request):
+    return render(request, 'service_equipment.html')
 def about_page(request):
     return render(request, "about.html")
 def kitchen_page(request):

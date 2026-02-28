@@ -1,0 +1,164 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Refrigeration
+Equipment - Trioo {% endblock %} {% block content %}
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .equipment-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .equipment-box img {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .equipment-box h5 {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fw-bold">Refrigeration Equipment</h1>
+    <p class="mt-3">
+      High-performance cooling solutions for commercial kitchens
+    </p>
+  </div>
+</section>
+
+<!-- Equipment Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Water Cooler.png' %}" />
+          <h5 class="fw-bold">Water Cooler</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Two Door Vertical Refrigerators.png' %}"
+          />
+          <h5 class="fw-bold">Two Door Vertical Refrigerator</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Four Door Vertical Refrigerators.png' %}"
+          />
+          <h5 class="fw-bold">Four Door Vertical Refrigerator</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/2 Door Under Counter Refrigeration.png' %}"
+          />
+          <h5 class="fw-bold">2 Door Under Counter Refrigeration</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/3 Door Under Counter Refrigeration.png' %}"
+          />
+          <h5 class="fw-bold">3 Door Under Counter Refrigeration</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Ventilation Cooling Wall Counter.png' %}"
+          />
+          <h5 class="fw-bold">Ventilation Cooling Wall Counter</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Salad Under Counter Refrigerator Three Door.png' %}"
+          />
+          <h5 class="fw-bold">Salad Under Counter Refrigerator Three Door</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Chest Freezer.png' %}" />
+          <h5 class="fw-bold">Chest Freezer</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Ice-Cream Freezer.png' %}" />
+          <h5 class="fw-bold">Ice-Cream Freezer</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Tilla Kulfi.png' %}" />
+          <h5 class="fw-bold">Tilla Kulfi</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Roller Ice-Cream Machine.png' %}" />
+          <h5 class="fw-bold">Roller Ice-Cream Machine</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Cube Machine.png' %}" />
+          <h5 class="fw-bold">Ice Cube Machine</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Cold Room.png' %}" />
+          <h5 class="fw-bold">Cold Room</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

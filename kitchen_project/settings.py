@@ -15,8 +15,9 @@ import os
 from decouple import config, UndefinedValueError
 
 # Use `config()` directly — no need to point to .env manually
-EMAIL_HOST_USER = config("EMAIL_HOST_USER", default=None)
-EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default=None)
+
+
+
 
 
 
@@ -28,10 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-$xpj!700^(4fh%xqthe!c68qiez3a#i0pc$a=u0*2fh#$)&l#&"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
 
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -115,8 +117,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # For Gmail, use smtp.gmail.com
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL_HOST_USER',default=None)
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD',default=None) # App password (not your actual email password)
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+ # App password (not your actual email password)
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 

@@ -1,0 +1,163 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Bar Equipment -
+Trioo {% endblock %} {% block content %}
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #111, #222);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .equipment-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .equipment-box img {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .equipment-box h5 {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fw-bold">Bar Equipment</h1>
+    <p class="mt-3">Premium & durable solutions for professional bar setup</p>
+  </div>
+</section>
+
+<!-- Equipment Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Single Door Visi Cooler (3).png' %}" />
+          <h5 class="fw-bold">Single Door Visi Cooler</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Double Door Visi Cooler.png' %}" />
+          <h5 class="fw-bold">Double Door Visi Cooler</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Cocktail Station.png' %}" />
+          <h5 class="fw-bold">Cocktail Station</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Two Door Back Bar Chiller.png' %}" />
+          <h5 class="fw-bold">Two Back Bar Cooler</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Three Door Back Bar Chiller.png' %}" />
+          <h5 class="fw-bold">Three Door Back Bar Cooler</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Wine Chiller Up Right.png' %}" />
+          <h5 class="fw-bold">Wine Chiller Up Right</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Beer & Beverage Cooling Solution.png' %}"
+          />
+          <h5 class="fw-bold">Beer & Beverage Cooling Solution</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Coffee Machine Double Grap.png' %}" />
+          <h5 class="fw-bold">Coffee Machine Double Grap</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Coffee Machine Single Grap.png' %}" />
+          <h5 class="fw-bold">Coffee Machine Single Grap</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Juice Dispenser (Single Jar).png' %}" />
+          <h5 class="fw-bold">Juice Dispenser (Single Jar)</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Juice Dispenser (Two Jar).png' %}" />
+          <h5 class="fw-bold">Juice Dispenser (Two Jar)</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Drink Mixer.png' %}" />
+          <h5 class="fw-bold">Drink Mixer</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Hand Held Mixer.png' %}" />
+          <h5 class="fw-bold">Hand Held Mixer</h5>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Blender  Juicer.png' %}" />
+          <h5 class="fw-bold">Blender/Juicer</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Ice Crusher.png' %}" />
+          <h5 class="fw-bold">Ice Crusher</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

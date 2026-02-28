@@ -1,0 +1,165 @@
+{% extends 'base.html' %} {% load static %} {% block title %} Cooking Equipment
+- Trioo {% endblock %} {% block content %}
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .equipment-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .equipment-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .equipment-box img {
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .equipment-box h5 {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="fw-bold">Cooking Equipment</h1>
+    <p class="mt-3">Premium commercial cooking solutions for modern kitchens</p>
+  </div>
+</section>
+
+<!-- Equipment Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Single Burner Indian Cooking Range.png' %}"
+          />
+          <h5 class="fw-bold">Single Burner Indian Cooking Rang</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Double Burner Indian Cooking Range.png' %}"
+          />
+          <h5 class="fw-bold">Double Burner Indian Cooking Range</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Three Burner Indian Cooking Range.png' %}"
+          />
+          <h5 class="fw-bold">Three Burner Indian Cooking Range</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img
+            src="{% static 'images/Four Burner Continental Cooking Range.png' %}"
+          />
+          <h5 class="fw-bold">Four Burner Continental Cooking Range</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Four Burner Range With Oven.png' %}" />
+          <h5 class="fw-bold">Four Burner Range With Oven</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Stock Pot Range.png' %}" />
+          <h5 class="fw-bold">Stock Pot Range</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Dosa Hot Plate.png' %}" />
+          <h5 class="fw-bold">Dosa Hot Plate</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Chapati Plate with Puffer.png' %}" />
+          <h5 class="fw-bold">Chapati Plate with Puffer</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Tilting Type Bulk Cooker.png' %}" />
+          <h5 class="fw-bold">Tilting Type Bulk</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Tilting Type Brat Pan.png' %}" />
+          <h5 class="fw-bold">Tilting Type Brat Pan</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Tilting Type Brat Pan.png' %}" />
+          <h5 class="fw-bold">Tilting Type Brat Pan</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Tilting Type Brat Pan.png' %}" />
+          <h5 class="fw-bold">Tilting Type Brat Pan</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Tilting Type Brat Pan.png' %}" />
+          <h5 class="fw-bold">Tilting Type Brat Pan</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="equipment-box">
+          <img src="{% static 'images/Single Burner Chinese Range.png' %}" />
+          <h5 class="fw-bold">Single Burner Chinese Range</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
