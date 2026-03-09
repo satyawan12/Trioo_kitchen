@@ -95,16 +95,21 @@ content %} {% block content %}
 </style>
 
 <!-- ================= HERO SECTION ================= -->
+<!-- ================= HERO SECTION ================= -->
 <section
   class="text-white text-center d-flex align-items-center justify-content-center position-relative"
   style="
-    background: url('{% static 'images/contact-banner.jpg' %}') center/cover
-      no-repeat;
-    min-height: 50vh;
+    height: 60vh;
+    background: url('{% static "images/commerical_kitchen.png" %}') center/cover no-repeat;
   "
 >
-  <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div>
+  <!-- Dark Overlay -->
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100"
+    style="background: rgba(0,0,0,0.6);"
+  ></div>
 
+  <!-- Content -->
   <div class="container position-relative">
     <h1 class="display-3 fw-bold">About Triooo</h1>
     <p class="lead text-light">
@@ -144,7 +149,7 @@ content %} {% block content %}
 
       <div class="col-lg-6 text-center">
         <img
-          src="{% static 'images/about-kitchen.jpg' %}"
+          src="{% static 'images/commerical_kitchen.png' %}"
           class="img-fluid rounded-4 shadow"
           alt="Stainless Steel Kitchen"
         />

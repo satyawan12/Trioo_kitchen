@@ -153,6 +153,7 @@
 </style>
 
 <!-- Hero Section -->
+{% comment %}
 <section class="hero-section text-white text-center">
   <div id="particles-js"></div>
 
@@ -161,6 +162,30 @@
     <p class="lead mb-4">
       Engineered for performance, designed for hygiene & built to last.
     </p>
+    <a
+      href="javascript:void(0)"
+      onclick="
+        document
+          .getElementById('contact')
+          .scrollIntoView({ behavior: 'smooth' })
+      "
+      class="btn btn-gold px-4 py-3"
+    >
+      Get a Quote
+    </a>
+  </div>
+</section>
+{% endcomment %}
+<section class="hero-section text-white text-center">
+  <div class="hero-content container">
+    <h5 class="brand-name mb-2">Triooo Kitchens</h5>
+
+    <h1 class="fw-bold mb-3">Commercial Kitchen Solutions</h1>
+
+    <p class="lead mb-4">
+      Engineered for performance, designed for hygiene & built to last.
+    </p>
+
     <a
       href="javascript:void(0)"
       onclick="
