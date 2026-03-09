@@ -50,7 +50,7 @@ Message:
                 subject=f"Trioo Website Contact: {subject}",
                 message=full_message,
                 from_email=settings.EMAIL_HOST_USER,
-                recipient_list=["sattukhatkar@gmail.com"],
+                recipient_list=["triooogroup1@gmail.com"],
                 fail_silently=False,
             )
 
