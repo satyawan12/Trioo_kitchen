@@ -31,15 +31,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 
-SECRET_KEY = "django-insecure-$xpj!700^(4fh%xqthe!c68qiez3a#i0pc$a=u0*2fh#$)&l#&"
-EMAIL_HOST_USER='chauhan.ankush2002@gmail.com'
-EMAIL_HOST_PASSWORD='ojvr vqzf vjyo baks'
-DEBUG=True
-ALLOWED_HOSTS = []
+
+
+DEBUG=False
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
 
 
@@ -123,8 +122,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # For Gmail, use smtp.gmail.com
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
  # App password (not your actual email password)
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
